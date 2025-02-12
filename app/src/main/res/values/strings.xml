@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="app_home_text">My Kiosk Application</string>
+    <string name="button_kiosk_on">Turn On Kiosk Mode</string>
+    <string name="button_kiosk_off">Turn Off Kiosk Mode</string>
+    <string name="profile_name">Sample Device Owner</string>
+</resources>
