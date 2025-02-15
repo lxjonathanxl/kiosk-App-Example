@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -14,19 +16,25 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarStyle">
 
         <Button
             android:id="@+id/button_kiosk_on"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_kiosk_on"/>
-
+            android:text="@string/button_kiosk_on"
+            app:icon="@drawable/lock"
+            app:iconGravity="end"
+            style="?android:attr/buttonBarButtonStyle"/>
         <Button
             android:id="@+id/button_kiosk_off"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_kiosk_off"/>
+            android:text="@string/button_kiosk_off"
+            app:icon="@drawable/lock_open"
+            app:iconGravity="end"
+            style="?android:attr/buttonBarButtonStyle"/>
     </LinearLayout>
 
 </LinearLayout>
