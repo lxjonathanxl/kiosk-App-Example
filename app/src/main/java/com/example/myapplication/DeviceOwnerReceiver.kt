@@ -15,7 +15,7 @@ class DeviceOwnerReceiver : DeviceAdminReceiver() {
 
 
     override fun onProfileProvisioningComplete(context: Context, intent: Intent) {
-        Log.d(TAG, "Profile provisioning complete")
+        Log.d(TAG, "Profile provisioning complete!")
         val manager = context.getSystemService(
             Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         val componentName = ComponentName(
