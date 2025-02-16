@@ -18,8 +18,10 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.HOME" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <!-- Change between home app and normal app by commenting/uncommenting -->
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- category android:name="android.intent.category.HOME" /-->
+                <!--category android:name="android.intent.category.DEFAULT" /-->
             </intent-filter>
         </activity>
 
@@ -34,6 +36,7 @@
                 android:resource="@xml/device_owner_receiver"/>
             <intent-filter>
                 <action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE"/>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
 
