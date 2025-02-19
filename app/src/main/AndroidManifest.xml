@@ -19,9 +19,9 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <!-- Change between home app and normal app by commenting/uncommenting -->
-                <category android:name="android.intent.category.LAUNCHER" />
-                <!-- category android:name="android.intent.category.HOME" /-->
-                <!--category android:name="android.intent.category.DEFAULT" /-->
+                <!--category android:name="android.intent.category.LAUNCHER" /-->
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 

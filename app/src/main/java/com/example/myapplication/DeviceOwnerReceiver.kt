@@ -28,6 +28,8 @@ class DeviceOwnerReceiver : DeviceAdminReceiver() {
             Log.e(TAG, "Failed to set profile name", e)
         }
 
+        allowlistApp(context, manager, componentName)
+
         launchMainActivity(context)
     }
 
@@ -53,5 +55,17 @@ class DeviceOwnerReceiver : DeviceAdminReceiver() {
         val intent = Intent(context, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         context.startActivity(intent)
+    }
+
+    private fun allowlistApp(context: Context, manager: DevicePolicyManager, componentName: ComponentName) {
+        // Check if the app is already allowlisted
+        val isAlreadyAllowlisted = manager.getLockTaskPackages(componentName).contains(context.packageName)
+        if (!isAlreadyAllowlisted) {
+            // Allowlist the app
+            manager.setLockTaskPackages(componentName, arrayOf(context.packageName))
+            Log.d(TAG, "App allowlisted for lock task mode")
+        } else {
+            Log.d(TAG, "App already allowlisted for lock task mode")
+        }
     }
 }
